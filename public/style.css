@@ -63,14 +63,18 @@ button {
   padding: 8px 12px;
   border: none;
   border-radius: 5px;
-  background: #fff;
+  background: linear-gradient(#fff, #ddd);
   color: #000;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
 
 button:hover {
   background: #e0e0e0;
+}
+
+button:active {
+  transform: scale(0.96);
 }
 
 #result {
@@ -121,4 +125,35 @@ button:hover {
   transform: translate(-50%, -50%);
   transition: transform 0.05s linear;
   z-index: 2;
+}
+
+#history {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#history li {
+  margin: 5px 0;
+  background: rgba(255,255,255,0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#history a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#history a:hover {
+  text-decoration: underline;
+}
+
+#bmc-wrapper {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
 }
