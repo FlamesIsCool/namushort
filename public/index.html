@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Namus Shortener</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    #result { margin-top: 10px; font-weight: bold; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>URL Shortener</h1>
-  <input type="text" id="urlInput" placeholder="Enter your long URL" size="50" />
-  <button id="shortenBtn">Shorten</button>
-  <div id="result"></div>
-  <div style="margin-top:20px;">
-    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Aura2" data-color="#eee7e7" data-emoji="🍕" data-font="Arial" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00"></script>
+  <div id="cursor-dot"></div>
+  <div class="container">
+    <h1>URL Shortener</h1>
+    <input type="text" id="urlInput" placeholder="Enter your long URL" />
+    <button id="shortenBtn">Shorten</button>
+    <div id="result"></div>
+    <div style="margin-top:20px;">
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Aura2" data-color="#eee7e7" data-emoji="🍕" data-font="Arial" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00"></script>
+    </div>
   </div>
   <script>
     const btn = document.getElementById('shortenBtn');
@@ -38,5 +38,12 @@
       }
     });
   </script>
+  <script>
+    const dot = document.getElementById('cursor-dot');
+    document.addEventListener('mousemove', e => {
+      dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  </script>
 </body>
 </html>
+

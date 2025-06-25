@@ -1,6 +1,6 @@
 # Namus URL Shortener
 
-This is a very small URL shortener written in Node.js using only built-in modules. It stores short URLs in a local `urls.json` file. The project includes a simple web page with a form to create short links and a Buy Me A Coffee button.
+This is a very small URL shortener written in Node.js using only built-in modules. It stores short URLs in a local `urls.json` file. The project includes a sleek black-and-white page with a grid background, glass blur effects, a cursor-following dot and Buy Me A Coffee button.
 
 ## Running locally
 
